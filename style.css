@@ -1,0 +1,255 @@
+body{
+    background-color: rgb(10, 8, 27);
+}
+
+h1{ /*Actualmente sin usar*/
+    font-family: Arial, Helvetica, sans-serif; /*Tarea investigar*/
+    color: #15accd;
+    text-align: center;
+    padding-top: 10px;
+}
+
+h2{ /*Usado en Tienda*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14pt;
+    color: #ffffff;
+}
+
+#titulo{ /*Encabezado*/
+    width: 100%;
+    height: 1cm;
+    background-color:rgb(10, 8, 27);
+    box-shadow: 2px 2px 2px #808080; /*x y desenfoque color... #mismos valores de veces=Colores grises*/
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    position:Fixed; /*para quedar fijo*/
+    z-index: 10; /*para mover sobre el eje z (Delante)*/
+}
+
+.logo{ /*Contenedor del logo*/
+    width: 10%;
+    height: auto;
+    position: relative;
+}
+
+.logo_texto{ /*Texto como logo*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    color: #ffffff;
+    float: left;
+    text-shadow: 2px 2px 2px #00eeee;
+}
+
+.menu{ /*Contenedor de menú de navegación*/
+    width: 60%;
+    height: auto;
+    position: relative;
+    float: left;
+}
+
+.estilo_texto{ /*Para agregar formato propio a los textos de navegación*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    color: #cccc00;
+    text-decoration: none;
+}
+
+.menu ul li:hover{ /*hiperlink over (Efecto a pasar el mouse)*/
+    background-color: rgb(7, 92, 71);
+    border-bottom:solid 2px #8fa800;
+    color: #010101;
+}
+.menu ul{
+    list-style: none;
+}
+
+.menu ul li{
+    /*para ubicar uno a lado de otro y respetar los bloques*/
+    display: block;
+    float: left;
+    padding: 2px 5px 2px 5px;
+    transition: 300ms;
+}
+
+.link-activo{ /*Destacar la posición actual del usuario dentro de la página*/
+    color: #ffffff;
+    border-top: solid 1px #fff;
+    border-left: solid 1px #fff;
+}
+
+.login{ /*Contenedor de Formulario de login*/
+    width: 30%;
+    height: auto;
+    position: relative;
+    float: left;
+}
+
+.formulario{ /*Formulario de login*/
+    float: left;
+}
+
+.form-control{ /*inputs*/
+    width: 30%;
+    height: 0.8cm;
+}
+
+.form-button{ /*Botones*/
+    width: 20%;
+    height: 0.9cm;
+    background-color: #15accd;
+    color: #000;
+    transition: 300ms;
+}
+
+.form-button:hover{ /*hiperlink over (Efecto a pasar el mouse)*/
+    background-color: #0077ff;
+    border-bottom:solid 2px #77ff11;
+    border-left:solid 2px #77ff11 ;
+    color: #ffffff;
+}
+
+#contenedor{/*contenedor dentro del body*/
+    width: 95%;
+    height:fit-content;
+    background-color:rgb(4, 47, 64);
+    position:absolute;
+    border-radius: 5px;
+    top: 1.5cm;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    margin: auto; /*top, right, buttom, left*/
+}
+
+.carrusel{ /*Contenedor del carrusel (Galeria de imágenes)*/
+    width: 100%;
+    height: 400px;
+    position:relative;
+    overflow: hidden;
+    background-image: url(imagenes/galeria_1.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    
+}
+
+.carrusel_form{ /*contenedor de la imágen y los botones del carrusel(Hecho por necesidad propia)*/
+    width: 110%;
+    height:100%;
+    position: relative;
+    overflow: auto;
+}
+
+.carrusel_img{ /*Imágen del carrusel*/
+    top: 8%;
+    width: auto;
+    height: 91.7%;
+    display: block;
+    position: relative;
+    float: left;
+    z-index: 8;
+    border: yellow;
+}
+
+#btnSiguiente{ /*Botón de siguiente en el carrusel*/
+    font-size:larger;
+    color: #ff0000;
+    background-color: rgba(222, 222, 222, 0.4);
+    border: none;
+    top: 8%;
+    height:91.7%;
+    width: 25.99%;
+    position: relative;
+    float: left;
+    display: block;
+    z-index: 9;
+}
+
+#btnSiguiente:hover{ /*Posición sobre los botón siguiente del carrusel*/
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#btnAnterior{ /*Botón de anterior en el carrusel*/
+    font-size:larger;
+    color: #ff0000;
+    background-color: rgba(222, 222, 222, 0.3);
+    border: none;
+    top: 8%;
+    height:91.7%;
+    width: 25.99%;
+    position: relative;
+    float: left;
+    display: block;
+    z-index: 9;
+}
+
+#btnAnterior:hover{ /*Posición sobre el botón anterior del carrusel*/
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.descripcion{ /*descripción de la página ubicado en el carrusel, pero fuera del form-carrusel*/
+    top: -50%;
+    margin: auto;
+    left: 15%;
+    width: 70%;
+    height: auto;
+    background-color: rgba(220, 220, 220, 0.3);
+    font-family: cursive;
+    font-size: medium;
+    text-align: justify;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px #4c4c4c;
+    position: relative;
+    z-index: 9999;
+    float: left;
+    display:flex;
+}
+
+#lista{ /*Espacio para los productos*/
+    width: 76.1%;
+    margin: auto;
+    position:relative;
+}
+
+div.producto{ /*contenedor del producto*/
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    display: block;
+    width: 180px;
+    height: 250px;
+    transition: 300ms;
+}
+
+div.producto:hover{ /*Acción al pasar el mouse sobre el producto*/
+    border: 1px solid #111;
+}
+
+div.producto img{ /*Imágen del producto*/
+    width: 100%;
+    height: 60%;
+}
+
+div.nombre{ /*Nombre del producto*/
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+}
+
+#contenedor_mini{ /*Contenedor de mi nombre cdentro del contenedor*/
+    background-color:rgb(213, 235, 14);
+    border-radius: 10px;
+}
+#mini_tienda{ /*Contenedor de mi nombre fuera del contenedor*/
+    width: 80%;
+    height: max-content;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 44%;
+    position:relative;
+}
+/*<>56%&*/

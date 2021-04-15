@@ -1,0 +1,87 @@
+<!DOCTYPE html> <!--html 5-->
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="script.js"></script>
+        <title>Mi primera web</title>
+        <meta charset="utf-8"> <!--Tarea-->
+    </head>
+    <body>
+        <header id="titulo">
+            <div class="logo"><span class="logo_texto">La caja tecnológica</span></div> <!--span para invocar css-->
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html" class="estilo_texto">Inicio</a></li>
+                    <li><a href="tienda.html" class="estilo_texto">Tienda</a></li>
+                    <li><a href="blog.html" class="estilo_texto">Blog</a></li>
+                    <li><a href="galeria.html" class="estilo_texto link-activo">Galría</a></li>
+                    <li><a href="recomendados.html" class="estilo_texto">Recomendados</a></li>
+                </ul>
+            </nav>
+            <div class="login">
+                <form class="formulario">
+                    <input class="form-control" type="text" name="user" placeholder="Usuario">
+                    <input class="form-control" type="password" name="pass" placeholder="Contraseña">
+                    <input class="form-button" type="submit" value="Acceder">
+                </form>
+            </div>
+        </header>
+        <!--bajo el encabezado-->
+        <div id="contenedor">
+            <!--Presentación-->
+            <div class="carrusel" id="carrusel">
+                <div class="carrusel_form">
+                    <input type="button" value="<<" onclick="btnAnterior()" id="btnAnterior">
+                    <img src="imagenes/galeria_1.jpg" class="carrusel_img" id="galeria_img">
+                    <input type="button" value=">>" onclick="btnSiguiente()" id="btnSiguiente">
+                </div>
+                <div class="descripcion">
+                    En esta página podrá hallar un sinfín de artículos y servicios tecnológicos 
+                    puestos a prueba. Teniendo en cuenta cada una de sus características y precio, 
+                    determinamos su valor económico y lo comparamos con su precio de venta.
+                </div>
+            </div>
+            <br>
+            <!--Productos abajo-->
+            <div id="lista">
+                <div class="producto">
+                    <a target="_blank" href="#">
+                        <img src="imagenes/Iphone7.jpg" alt="RobTec" class="Iphone7" onclick="ver_img()"><!--investigar eventos-->
+                    </a>
+                    <div class="nombre">Iphone 7</div>
+                </div>
+
+                <div class="producto">
+                    <a target="_blank" href="#">
+                        <img src="imagenes/Noteboock.jpg" alt="Notebook" class="img_mini" onclick="ver_img()"><!--investigar eventos-->
+                    </a>
+                    <div class="nombre">Noteboock gaming Ryzen 7</div>
+                </div>
+
+                <div class="producto">
+                    <a target="_blank" href="#">
+                        <img src="imagenes/VR_Led.jpg" alt="VR_Led" class="img_mini" onclick="ver_img()"><!--investigar eventos-->
+                    </a>
+                    <div class="nombre">Cascos VR con luces rgb</div>
+                </div>
+
+                <div class="producto">
+                    <a target="_blank" href="#">
+                        <img src="imagenes/PS5.jpg" alt="PS5" class="img_mini" onclick="ver_img()"><!--investigar eventos-->
+                    </a>
+                    <div class="nombre">Play Station 5 white</div>
+                </div>
+
+                <div class="producto">
+                    <a target="_blank" href="#">
+                        <img src="imagenes/Cam_Accion_Negra.jpg" alt="Cam_Accion_Negra" class="img_mini" onclick="ver_img()"><!--investigar eventos-->
+                    </a>
+                    <div class="nombre">Cámara de acción negra</div>
+                </div>
+
+            </div>
+            <!--Nombre abajo-->
+            <marquee id="contenedor_mini">Alumno:Robert Romero</marquee>    
+        </div>
+    </body>
+</html>

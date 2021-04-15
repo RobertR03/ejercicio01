@@ -1,0 +1,91 @@
+<!DOCTYPE html> <!--html 5-->
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="script.js"></script>
+        <title>Mi primera web</title>
+        <meta charset="utf-8"> <!--Tarea-->
+    </head>
+    <body>
+        <header id="titulo">
+            <div class="logo"><span class="logo_texto">La caja tecnológica</span></div> <!--span para invocar css-->
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html" class="estilo_texto">Inicio</a></li>
+                    <li><a href="tienda.html" class="estilo_texto link-activo">Tienda</a></li>
+                    <li><a href="blog.html" class="estilo_texto">Blog</a></li>
+                    <li><a href="galeria.html" class="estilo_texto">Galría</a></li>
+                    <li><a href="recomendados.html" class="estilo_texto">Recomendados</a></li>
+                </ul>
+            </nav>
+            <div class="login">
+                <form class="formulario">
+                    <input class="form-control" type="text" name="user" placeholder="Usuario">
+                    <input class="form-control" type="password" name="pass" placeholder="Contraseña">
+                    <input class="form-button" type="submit" value="Acceder">
+                </form>
+            </div>
+        </header>
+        <!--bajo el encabezado-->
+        <div id="contenedor">
+            <!--Presentación-->
+            <h2>Todos nuestros productos</h2>
+            <br>
+            <Form method="POST" action="">
+                <input type="text" name="search" class="form-control" placeholder="¿Qué buscas?">
+                <select name="category" class="form-control">
+                    <option value="all">Todas las categorías</option>
+                    <option value="electronics">Electónica</option>
+                    <option value="computing">Informática</option>
+                    <option value="homeoffice">Hogar y oficina</option>
+                    <option value="entertaiment">Entretenimiento</option>
+                </select>
+                <input type="submit" class="form-button" value="filtrar">
+            </Form>
+            <hr>
+            <!--Productos abajo-->
+            <div id="lista">
+                <div class="producto">
+                    <a target="_blank" href="#">
+                        <img src="imagenes/Iphone7.jpg" alt="RobTec" class="Iphone7" onclick="ver_img()"><!--investigar eventos-->
+                    </a>
+                    <div class="nombre">Iphone 7</div>
+                </div>
+
+                <div class="producto">
+                    <a target="_blank" href="#">
+                        <img src="imagenes/Noteboock.jpg" alt="Notebook" class="img_mini" onclick="ver_img()"><!--investigar eventos-->
+                    </a>
+                    <div class="nombre">Noteboock gaming Ryzen 7</div>
+                </div>
+
+                <div class="producto">
+                    <a target="_blank" href="#">
+                        <img src="imagenes/VR_Led.jpg" alt="VR_Led" class="img_mini" onclick="ver_img()"><!--investigar eventos-->
+                    </a>
+                    <div class="nombre">Cascos VR con luces rgb</div>
+                </div>
+
+                <div class="producto">
+                    <a target="_blank" href="#">
+                        <img src="imagenes/PS5.jpg" alt="PS5" class="img_mini" onclick="ver_img()"><!--investigar eventos-->
+                    </a>
+                    <div class="nombre">Play Station 5 white</div>
+                </div>
+
+                <div class="producto">
+                    <a target="_blank" href="#">
+                        <img src="imagenes/Cam_Accion_Negra.jpg" alt="Cam_Accion_Negra" class="img_mini" onclick="ver_img()"><!--investigar eventos-->
+                    </a>
+                    <div class="nombre">Cámara de acción negra</div>
+                </div>
+
+            </div>
+            <!--Nombre abajo-->
+        </div>
+        <br>
+        <div id="mini_tienda">
+            <marquee id="contenedor_mini">Alumno:Robert Romero</marquee>
+        </div>    
+    </body>
+</html>
